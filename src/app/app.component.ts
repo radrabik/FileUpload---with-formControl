@@ -10,13 +10,7 @@ export class AppComponent  {
   name = 'Angular ' + VERSION.major;
 
   form = this.fb.group({
-    courseType: ['premium', Validators.required],
-    price: [null, {
-      validators: [Validators.required, Validators.min(1), Validators.max(9999), Validators.pattern("[0-9]+") ]
-    }],
     thumbnail: [null],
-    fromDate: ['', Validators.required],
-    toDate: ['', Validators.required]
   });
 
   constructor(private fb: FormBuilder) {}

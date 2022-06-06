@@ -73,10 +73,11 @@ export class FileUploadComponent implements ControlValueAccessor, Validator {
             .pipe(
                 catchError(error => {
                     this.fileUploadError = true;
-                    return of(error);
+                    return of(error); 
                 }),
                 finalize(() => {
                     this.uploadProgress = null;
+                    console.log ("error occured")
                 })
             )
             .subscribe(event => {
