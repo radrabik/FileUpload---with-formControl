@@ -1,3 +1,14 @@
 
+<div [formGroup]="form">
 
-<app-file-upload></app-file-upload>
+  <!-- File upload -->
+  <app-file-upload formControlName="thumbnail" requiredFileType="image/png"></app-file-upload>
+
+  <div>
+    {{ form.value | json }}, {{ form.errors | json }}
+  </div>
+  <div>
+    Form validity state: {{ form.valid }}
+  </div>
+  
+</div>
